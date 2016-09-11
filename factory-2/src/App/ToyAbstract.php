@@ -9,23 +9,23 @@
 
 namespace App;
 
-abstract class Toy
+abstract class ToyAbstract
 {
     public $name = '';
     public $price = 0;
 
     public function prepare()
     {
-        echo $this->name . ' is prepared';
+        echo $this->name . " is prepared \n";
     }
 
     public function package()
     {
-        echo $this->name . ' is packaged';
+        echo $this->name . " is packaged\n";
     }
 
     public function label()
     {
-        echo $this->name . ' is priced at ' . $this->price;
+        echo $this->name . ' is priced at ' . $this->price . "\n";
     }
 }

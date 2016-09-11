@@ -3,13 +3,13 @@
  * Created by PhpStorm.
  * User: Hyder
  * Date: 11/09/2016
- * Time: 12:57
+ * Time: 12:53
  */
 
 namespace App;
 
 
-class CaToysFactory extends ToysFactory
+class CaSimpleFactory
 {
     public function createToy($toyName)
     {
@@ -23,4 +23,6 @@ class CaToysFactory extends ToysFactory
         }
         return $toy;
     }
+    
+
 }

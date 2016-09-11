@@ -13,19 +13,22 @@ class NyToysFactory extends ToysFactory
 {
     public $simpleFactory;
 
-    public function __construct(SimpleFactory $simpleFactory)
+
+    public function __construct(NySimpleFactory $simpleFactory)
     {
         $this->simpleFactory = $simpleFactory;
     }
-
-    public function produceToy($toyName)
+    
+    public function createToy($toyName)
     {
         $toy = null;
-
-        $toy = $this->simpleFactory->createToy($toyName);
-        $toy->prepare();
-        $toy->package();
-        $toy->label();
+        if ('car' == $toyName) {
+            $toy = new \App\Toys\NyCar();
+        } else {
+            if ('helicopter' == $toyName) {
+                $toy = new \App\Toys\NyHelicopter();
+            }
+        }
         return $toy;
     }
 }

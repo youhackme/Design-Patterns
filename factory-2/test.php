@@ -6,11 +6,17 @@
  * Time: 23:23
  */
 
-
 require('vendor/autoload.php');
 
+//The main (Local) Factory
+$toys = new  \App\LocalToysFactory((new \App\SimpleFactory()));
+$toys->produceToy('helicopter');
 
-$test = new \App\NySimpleFactory();
+// NY Factory
+$toys = new  \App\NyToysFactory((new \App\NySimpleFactory()));
+$toys->produceToy('helicopter');
 
-$toys = new  \App\NYToysFactory((new \App\NySimpleFactory()));
-$toys->produceToy('car');
+//CA Factory
+$toys = new  \App\CaToysFactory((new \App\CaSimpleFactory()));
+$toys->produceToy('helicopter');
+

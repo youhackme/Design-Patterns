@@ -9,8 +9,8 @@
 namespace App\Toys;
 
 
-class NyCar extends \App\ToyAbstract
+class CaCar extends \App\ToyAbstract
 {
-    public $name = 'NY Car';
-    public $price = 20;
+    public $name = 'CA Car';
+    public $price = 40;
 }
