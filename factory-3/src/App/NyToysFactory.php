@@ -1,24 +1,24 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: Hyder
- * Date: 17/07/2016
- * Time: 23:25
+ * Date: 11/09/2016
+ * Time: 16:43
  */
-
 namespace App;
 
-
-class SimpleFactory
+class NyToysFactory extends ToysFactory
 {
     public function createToy($toyName)
     {
         $toy = null;
+        $nyComponentsFactory = new NyComponentsFactory();
         if ('car' == $toyName) {
-            $toy = new \App\Toys\Car();
+            $toy = new \App\Toys\NyCar($nyComponentsFactory);
         } else {
             if ('helicopter' == $toyName) {
-                $toy = new \App\Toys\Helicopter();
+                $toy = new \App\Toys\NyHelicopter($nyComponentsFactory);
             }
         }
         return $toy;

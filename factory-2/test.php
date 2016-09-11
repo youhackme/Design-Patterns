@@ -9,14 +9,14 @@
 require('vendor/autoload.php');
 
 //The main (Local) Factory
-$toys = new  \App\LocalToysFactory((new \App\SimpleFactory()));
+$toys = new  \App\LocalToysFactory();
 $toys->produceToy('helicopter');
 
 // NY Factory
-$toys = new  \App\NyToysFactory((new \App\NySimpleFactory()));
+$toys = new  \App\NyToysFactory();
 $toys->produceToy('helicopter');
 
 //CA Factory
-$toys = new  \App\CaToysFactory((new \App\CaSimpleFactory()));
+$toys = new  \App\CaToysFactory();
 $toys->produceToy('helicopter');
 

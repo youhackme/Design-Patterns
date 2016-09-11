@@ -11,13 +11,7 @@ namespace App;
 
 class LocalToysFactory extends ToysFactory
 {
-    public $simpleFactory;
-
-    public function __construct(SimpleFactory $simpleFactory)
-    {
-        $this->simpleFactory = $simpleFactory;
-    }
-
+    
     public function createToy($toyName)
     {
         $toy = null;
