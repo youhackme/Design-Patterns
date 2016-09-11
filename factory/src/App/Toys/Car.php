@@ -14,16 +14,16 @@ class Car
 
     public function prepare()
     {
-        echo "Preping car toy";
+        echo "Preping car toy\n";
     }
 
     public function package()
     {
-        echo "Packaging car toy";
+        echo "Packaging car toy\n";
     }
 
     public function label()
     {
-        echo "Labelling car toy";
+        echo "Labelling car toy\n";
     }
 }

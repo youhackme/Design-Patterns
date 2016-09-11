@@ -10,3 +10,4 @@
 require('vendor/autoload.php');
 
 $toys = new  \App\ToysFactory((new \App\SimpleFactory()));
+$toys->produceToy('car');
