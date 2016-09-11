@@ -15,10 +15,10 @@ class NyToysFactory extends ToysFactory
         $toy = null;
         $nyComponentsFactory = new NyComponentsFactory();
         if ('car' == $toyName) {
-            $toy = new NyCar($nyComponentsFactory);
+            $toy = new \App\Toys\NyCar($nyComponentsFactory);
         } else {
             if ('helicopter' == $toyName) {
-                $toy = new NyHelicopter($nyComponentsFactory);
+                $toy = new \App\Toys\NyHelicopter($nyComponentsFactory);
             }
         }
         return $toy;

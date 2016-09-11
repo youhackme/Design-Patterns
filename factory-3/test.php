@@ -8,5 +8,8 @@
 
 require('vendor/autoload.php');
 
+//The Franchise Factory
+$toys = new  \App\NyToysFactory();
+$toys->produceToy('car');
 
 
