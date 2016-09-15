@@ -9,13 +9,10 @@
 
 require('vendor/autoload.php');
 
-$mary = new \App\Mother();
-$nathan = new \App\Son();
-$nathan->registerObserver($mary);
 
-//$nathan->startCrying();
-$nathan->stopCrying();
 
-if ($nathan->isCrying()) {
-    $nathan->notifyObservers();
-}
+// Commander's code
+$peter = new Gunner();
+$gunnerFireCommand = new GunnerFireCommand($peter);
+$planA = new BattlePlan();
+$planA->setCommand('planA', $gunnerFireCommand);
