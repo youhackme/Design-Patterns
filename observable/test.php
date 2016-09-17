@@ -9,12 +9,13 @@
 
 require('vendor/autoload.php');
 
+
 $mary = new \App\Mother();
 $nathan = new \App\Son();
 $nathan->registerObserver($mary);
 
-//$nathan->startCrying();
-$nathan->stopCrying();
+$nathan->startCrying();
+//$nathan->stopCrying();
 
 if ($nathan->isCrying()) {
     $nathan->notifyObservers();
