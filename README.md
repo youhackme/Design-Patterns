@@ -10,6 +10,6 @@ Simply run `php test.php`.
 # Where do these examples comes from?
 
 Most of them come from an ebook  I bought called **Understanding Design Patterns**. The explanation is great, however most coding
-however, the examples contains errors that will not work if you test them.
+examples contains errors.
 
 I have gone through each of them and fixed the bugs!
